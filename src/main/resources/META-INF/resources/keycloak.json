@@ -1,0 +1,8 @@
+{
+  "realm": "quarkus",
+  "auth-server-url": "https://keycloak-che-kube-admin-devspaces-eug7n3.apps.ocp-dev.cloudfirst.dev/",
+  "ssl-required": "external",
+  "resource": "ui",
+  "public-client": true,
+  "confidential-port": 0
+}

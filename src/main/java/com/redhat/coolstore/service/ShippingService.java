@@ -1,10 +1,10 @@
 package com.redhat.coolstore.service;
 
-import javax.ejb.Stateless;
+import jakarta.enterprise.context.RequestScoped;
 
 import com.redhat.coolstore.model.ShoppingCart;
 
-@Stateless
+@RequestScoped
 public class ShippingService {
 
     public void calculateShipping(ShoppingCart sc) {

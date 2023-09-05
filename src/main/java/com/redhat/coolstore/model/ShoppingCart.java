@@ -3,9 +3,7 @@ package com.redhat.coolstore.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import javax.enterprise.context.Dependent;
+import jakarta.enterprise.context.Dependent;
 
 @Dependent
 public class ShoppingCart implements Serializable {

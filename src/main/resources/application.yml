@@ -1,0 +1,38 @@
+quarkus:
+  keycloak:
+    devservices:
+      container-env:
+        KC_PROXY: edge
+  http:
+    host: 0.0.0.0
+    cors: true
+  flyway:
+    migrate-at-start: true
+  log:
+    console:
+      enable: true
+    # level: DEBUG
+
+mp:
+  messaging:
+    outgoing:
+      orders-topic:
+        address: orders
+        connector: smallrye-amqp
+    incoming:
+      orders-incoming:
+        broadcast: true
+        address: orders
+        connector: smallrye-amqp
+        auto:
+          offset:
+            reset: earliest
+
+'%dev':
+  quarkus:
+    http:
+      cors:
+        origins: /.*/
+
+# quarkus.dev-ui.cors.enabled=false
+
