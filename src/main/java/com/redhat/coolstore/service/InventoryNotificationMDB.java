@@ -10,7 +10,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.rmi.PortableRemoteObject;
 import java.util.Hashtable;
-import java.util.logging.Logger;
 
 public class InventoryNotificationMDB implements MessageListener {
 
@@ -18,9 +17,6 @@ public class InventoryNotificationMDB implements MessageListener {
 
     @Inject
     private CatalogService catalogService;
-
-    @Inject
-    private Logger log;
 
     private final static String JNDI_FACTORY = "weblogic.jndi.WLInitialContextFactory";
     private final static String JMS_FACTORY = "TCF";
